@@ -1,0 +1,301 @@
+:root {
+  --cream: #fbf6ee;
+  --paper: #ffffff;
+  --ink: #2b2118;
+  --muted: #6b5d50;
+  --accent: #d9793a;
+  --accent-dark: #b35a22;
+  --sage: #5f8a64;
+  --line: #eadfd0;
+  --soft: #faf4ea;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(43, 33, 24, 0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.2;
+}
+
+a { color: inherit; }
+
+.container { width: min(1100px, 92%); margin: 0 auto; flex: 1; }
+
+.muted { color: var(--muted); }
+
+/* ---------- Header / footer ---------- */
+header.site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.25rem 0;
+}
+
+.brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+nav a:hover { color: var(--accent-dark); }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.1s;
+  text-align: center;
+}
+.btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn:active { transform: scale(0.98); }
+
+.btn.secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn.secondary:hover {
+  background: transparent;
+  color: var(--accent-dark);
+  border-color: var(--accent);
+}
+
+.row-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ---------- Home page ---------- */
+section { padding: 4.5rem 0; }
+
+.hero { padding: 4rem 0 4rem; }
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  max-width: 16ch;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 1.2rem 0 2rem;
+}
+
+.section-title { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 0.5rem; }
+.section-lead { color: var(--muted); max-width: 60ch; margin-bottom: 2rem; }
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.impact h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+.impact p { color: var(--muted); font-size: 0.95rem; }
+
+.about p { max-width: 65ch; color: var(--muted); margin-bottom: 1rem; }
+
+.donate-card { max-width: 680px; }
+
+.amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.chip {
+  border: 2px solid var(--line);
+  background: var(--paper);
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: inherit;
+}
+.chip:hover,
+.chip.active {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+.chip.active { background: #fbe9dc; }
+
+.custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  background: var(--paper);
+  font-weight: 600;
+}
+.custom input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 7rem;
+  background: transparent;
+  font-family: inherit;
+  color: var(--ink);
+}
+
+.donate-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* ---------- Donations page ---------- */
+.page-head { padding: 3rem 0 1.5rem; }
+.page-head h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.amount-big {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.methods {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.method h2 {
+  font-size: 1.5rem;
+  margin: 0.25rem 0 0.5rem;
+}
+.method p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.method .method-off { font-style: italic; }
+
+.address {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  padding: 0.8rem;
+  border-radius: 10px;
+  word-break: break-all;
+  margin: 0.5rem 0 1rem;
+}
+
+.qr {
+  display: flex;
+  justify-content: center;
+  min-height: 180px;
+  margin: 0.5rem 0;
+}
+.qr img,
+.qr canvas { border-radius: 8px; }
+
+.status {
+  font-size: 0.9rem;
+  color: var(--sage);
+  min-height: 1.4em;
+  margin-top: 0.6rem;
+}
+
+.thanks {
+  margin-top: 2rem;
+  background: #f1f7f1;
+  border-color: #cfe3cf;
+}
+.thanks h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.thanks p { color: var(--muted); margin-bottom: 0.75rem; }
+.thanks a { color: var(--accent-dark); }
+
+.spending { margin-bottom: 2.5rem; }
+.spending h2 { font-size: 1.3rem; margin: 0.4rem 0 0.5rem; }
+.spending p { color: var(--muted); font-size: 0.95rem; }
+.transparency { padding: 2rem 0 0; }
+.transparency p { color: var(--muted); margin-bottom: 0.9rem; max-width: 65ch; }
+
+.back {
+  display: inline-block;
+  margin-top: 2.5rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  nav a { margin-left: 0.9rem; }
+  section { padding: 3rem 0; }
+}

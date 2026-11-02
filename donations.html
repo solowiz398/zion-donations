@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Donation | Hope Children's Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site">
+      <a href="index.html" class="brand">Hope Children's Home</a>
+      <nav>
+        <a href="use-of-funds.html">How we use funds</a>
+        <a href="index.html">&larr; Back to home</a>
+      </nav>
+    </header>
+
+    <div class="page-head">
+      <h1>Make a donation</h1>
+      <p class="muted">Choose how you would like to give. Every gift goes directly to the children in our care.</p>
+    </div>
+
+    <div class="card summary">
+      <div>
+        <div class="tag">Your donation</div>
+        <div class="amount-big" id="amountLabel">$25.00</div>
+      </div>
+      <label class="custom">
+        $
+        <input id="amountInput" type="text" inputmode="decimal" placeholder="Amount" aria-label="Donation amount">
+      </label>
+    </div>
+
+    <div class="methods">
+      <!-- Bitcoin -->
+      <article class="card method" id="btcCard">
+        <span class="tag">Bitcoin (BTC)</span>
+        <h2>Pay with Bitcoin</h2>
+        <div class="method-body">
+          <p>Scan the QR code with your wallet, or copy the address below. Send the Bitcoin equivalent of your donation, and send only BTC to this address.</p>
+          <div class="qr" id="btcQr"></div>
+          <div class="address" id="btcAddress"></div>
+          <div class="row-buttons">
+            <button class="btn" id="copyBtn" type="button">Copy address</button>
+            <a class="btn secondary" id="btcWalletLink" href="#">Open in wallet</a>
+          </div>
+          <p class="status" id="copyStatus" aria-live="polite"></p>
+        </div>
+        <p class="method-off" hidden>Bitcoin giving is not available right now. Please use another method.</p>
+      </article>
+
+      <!-- PayPal -->
+      <article class="card method" id="paypalCard">
+        <span class="tag">PayPal</span>
+        <h2>Pay with PayPal</h2>
+        <div class="method-body">
+          <p>You will be taken to PayPal to complete your donation to Hope Children's Home. Your selected amount is filled in for you.</p>
+          <div class="row-buttons">
+            <a class="btn" id="paypalLink" href="#" target="_blank" rel="noopener noreferrer">Continue to PayPal</a>
+          </div>
+        </div>
+        <p class="method-off" hidden>PayPal giving is not available right now. Please use another method.</p>
+      </article>
+
+      <!-- Cash App -->
+      <article class="card method" id="cashCard">
+        <span class="tag">Cash App</span>
+        <h2>Pay with Cash App</h2>
+        <div class="method-body">
+          <p>You will be taken to Cash App to send your donation. On a phone with Cash App installed, the link opens the app directly.</p>
+          <div class="row-buttons">
+            <a class="btn" id="cashLink" href="#" target="_blank" rel="noopener noreferrer">Continue to Cash App</a>
+          </div>
+        </div>
+        <p class="method-off" hidden>Cash App giving is not available right now. Please use another method.</p>
+      </article>
+    </div>
+
+    <div class="card thanks" id="thanksBox" hidden>
+      <h2>Thank you for giving</h2>
+      <p>Your generosity helps us keep the children in our care safe, fed, healthy and in school. If your payment went through, you do not need to do anything else.</p>
+      <p>Want to see exactly where donations go? <a href="use-of-funds.html">Read how we use your gift</a>.</p>
+    </div>
+
+    <a href="index.html" class="back">&larr; Back to home</a>
+  </div>
+
+  <footer class="site">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Hope Children's Home. Thank you for your generosity.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

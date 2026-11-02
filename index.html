@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | ZION ORPHANAGE</title>
+  <meta name="description" content="Support Hope Children's Home with a donation of shelter, education, nutrition and healthcare for children in our care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site">
+      <a href="index.html" class="brand">Hope Children's Home</a>
+      <nav>
+        <a href="#impact">Our work</a>
+        <a href="#about">About</a>
+        <a href="use-of-funds.html">How we use funds</a>
+        <a href="#donate">Donate</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Every child deserves a home, a meal and a future.</h1>
+      <p>Hope Children's Home cares for orphaned and vulnerable children, giving them a safe place to live, a chance to learn and the care they need to grow. Your gift keeps our doors open.</p>
+      <a href="#donate" class="btn">Donate now</a>
+    </section>
+
+    <section id="impact">
+      <h2 class="section-title">Where your gift goes</h2>
+      <p class="section-lead">Every donation supports the day-to-day life of the children in our home.</p>
+      <div class="grid impact">
+        <div class="card">
+          <h3>Safe shelter</h3>
+          <p>Clean beds, secure housing and a stable place to call home.</p>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p>School fees, uniforms, books and tutoring so every child can keep learning.</p>
+        </div>
+        <div class="card">
+          <h3>Nutrition</h3>
+          <p>Three nourishing meals a day and clean drinking water.</p>
+        </div>
+        <div class="card">
+          <h3>Healthcare</h3>
+          <p>Routine checkups, medicine and care when a child falls ill.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About us</h2>
+      <p>Hope Children's Home was founded to give orphaned and abandoned children a family-style home where they are loved, protected and encouraged to dream big.</p>
+      <p>We are run by a small team of caregivers, teachers and volunteers. Donations are used directly for the children's needs, and we are always happy to share how funds are spent.</p>
+    </section>
+
+    <section id="donate">
+      <h2 class="section-title">Make a donation</h2>
+      <p class="section-lead">Pick an amount, then choose how you would like to give: Bitcoin, PayPal or Cash App.</p>
+      <div class="card donate-card">
+        <div class="amounts" role="group" aria-label="Choose a donation amount">
+          <button class="chip" type="button" data-amount="10">$10</button>
+          <button class="chip active" type="button" data-amount="25">$25</button>
+          <button class="chip" type="button" data-amount="50">$50</button>
+          <button class="chip" type="button" data-amount="100">$100</button>
+          <label class="custom">
+            $
+            <input id="customAmount" type="text" inputmode="decimal" placeholder="Other" aria-label="Custom donation amount">
+          </label>
+        </div>
+        <div class="donate-row">
+          <a id="donateBtn" class="btn" href="donations.html?amount=25">Donate $25</a>
+        </div>
+        <p class="note">You will be taken to a secure page where you can complete your gift. Thank you for standing with these children.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Hope Children's Home. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
