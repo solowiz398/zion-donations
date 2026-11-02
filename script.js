@@ -5,7 +5,7 @@
 // =====================================================================
 const CONFIG = {
   organization: "Hope Children's Home",
-  bitcoinAddress: "REPLACE_WITH_BTC_ADDRESS", // e.g. bc1q...
+  bitcoinAddress: "bc1qtvdp5aq74hlunk9rlgw8zffvqgfve02893uphr", // e.g. bc1q...
   paypalHandle: "REPLACE_PAYPAL_HANDLE",      // your paypal.me name, e.g. "hopechildrenshome"
   cashAppTag: "REPLACE_CASHTAG",              // your $cashtag WITHOUT the $ sign
   currency: "USD",
@@ -71,6 +71,9 @@ function initHomePage() {
     donateBtn.href = amount
       ? `donations.html?amount=${amount}`
       : "donations.html";
+    donateBtn.textContent = amount
+      ? `Donate ${formatMoney(amount).replace(/\.00$/, "")}`
+      : "Donate";
   };
 
   chips.forEach((chip) => {
