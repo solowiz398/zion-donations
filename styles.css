@@ -234,17 +234,39 @@ section { padding: 4.5rem 0; }
 .methods {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
 }
 
+.method { padding: 1.25rem; }
+
+.brand-badge {
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.brand-badge.paypal { background: #003087; color: #ffffff; }
+.brand-badge.paypal .pal { color: #009cde; margin-left: 1px; }
+.brand-badge.cashapp { background: #00d64f; color: #0b0b0b; }
+.brand-badge.bitcoin { background: #f7931a; color: #ffffff; }
+
 .method h2 {
-  font-size: 1.5rem;
-  margin: 0.25rem 0 0.5rem;
+  font-size: 1.4rem;
+  margin: 0.25rem 0 0.4rem;
 }
 .method p {
   color: var(--muted);
-  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
 }
+.method .row-buttons .btn { flex: 1 1 auto; }
 .method .method-off { font-style: italic; }
 
 .address {
