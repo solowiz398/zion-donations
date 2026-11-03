@@ -5,7 +5,7 @@
 // =====================================================================
 const CONFIG = {
   organization: "Hope Children's Home",
-  bitcoinAddress: "bc1qtvdp5aq74hlunk9rlgw8zffvqgfve02893uphr", // e.g. bc1q...
+  bitcoinAddress: "bc1q0ypafa2gun9mcndkzqhu95p5kqk6juq5gmh4wd", // e.g. bc1q...
   paypalHandle: "REPLACE_PAYPAL_HANDLE",      // your paypal.me name, e.g. "hopechildrenshome"
   cashAppTag: "REPLACE_CASHTAG",              // your $cashtag WITHOUT the $ sign
   currency: "USD",
